@@ -1,15 +1,15 @@
 
 # NMDS
-# Cargar tabla: Frecuencias
+# Cargar tabla: FrecuenciaNMDS
 
 library(vegan)
 library(tidyverse)
 
-str(Frecuencia)
-Frecuencia$Tipo <- as.factor(Frecuencia$Tipo)
-str(Frecuencia)
+str(FrecuenciaNMDS)
+FrecuenciaNMDS$Tipo <- as.factor(FrecuenciaNMDS$Tipo)
+str(FrecuenciaNMDS)
 
-Respuesta <- subset(Frecuencia, select = -c(Tipo, Actor) )
+Respuesta <- subset(FrecuenciaNMDS, select = -c(Tipo, Actor) )
 View(Respuesta)
 
 # Matriz de distancias
@@ -35,8 +35,8 @@ stressplot(NMDA)
 
 plot(NMDA, type="t")
 
-levels(Frecuencia$Tipo)
-length(levels(Frecuencia$Tipo))
+levels(FrecuenciaNMDS$Tipo)
+length(levels(FrecuenciaNMDS$Tipo))
 # Hay 2 niveles, entonces vamos
 # a utilizar 2 colores para
 # representarlos
@@ -48,13 +48,13 @@ op <- ordiplot(NMDA, type = "n")
 cols = c("blue", "green")
 
 # Los puntos:
-points(NMDA, cex =1, pch= 16, col = cols[Frecuencia$Tipo])
+points(NMDA, cex =1, pch= 16, col = cols[FrecuenciaNMDS$Tipo])
 
 # Unimos los puntos al centroide:
-ordispider(NMDA, groups = Frecuencia$Tipo, 
+ordispider(NMDA, groups = FrecuenciaNMDS$Tipo, 
            label = T,col = cols )
 
 # Construimos un polígono alrededor de los grupos (niveles):
-ordihull(NMDA, groups = Frecuencia$Tipo, lty = "dotted", col = cols)
+ordihull(NMDA, groups = FrecuenciaNMDS$Tipo, lty = "dotted", col = cols)
 
 
