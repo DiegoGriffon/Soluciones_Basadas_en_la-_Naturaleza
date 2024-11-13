@@ -1,7 +1,7 @@
 # Soluciones_Basadas_en_la_Naturaleza
 Se presenta el código utilizado en el artículo:
 Rodríguez, E.G. Griffon, D. 2024. Soluciones Basadas en la Naturaleza ¿Fracturas irreconciliables?   
-https://x.com/brookstweetz/status/1856681991799747011
+https://ecopoliticavenezuela.org/2024/11/13/soluciones-basadas-en-la-naturaleza-fracturas-irreconciliables/
  
 Este código permite analizar las diferencias en los discursos empleados por las personas que están a favor y en contra del uso de Soluciones Basadas en la Naturaleza.
 
